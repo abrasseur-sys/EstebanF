@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+        
+    </style>
+</head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link rel="stylesheet" href="jbnszdbz.css">
+<body>
+
+    <h1 class="titulo-principal">
+        Ingles (medio)
+        <span class="subtitulo">Colegio San José padres bayoneses</span>
+    </h1>
+
+    <div class="contenedor-verbos">
+        <div class="titulo-verbos">Verbos principales (Irregular Verbs)</div>
+        <ul class="lista-verbos">
+            <li><span class="detalle">Be (am/is/are) - was / were - been</span></li>
+            <li><span class="detalle">Break - broke - broken</span></li>
+            <li><span class="detalle">Build - built - built</span></li>
+            <li><span class="detalle">Buy - bought - bought</span></li>
+        </ul>
+    </div>
+
+    <div class="contenedor-temas">
+        <ol class="lista-temas">
+            
+            <li id="tema-1" class="elemento-tema">
+                <span class="tema-nombre">past simple</span>
+                <div class="detalle">Estructura: Sujeto + verbo en pasado</div>
+                <div class="detalle">Palabras clave: yesterday, ago, last week, in 2010</div>
+                
+                <div class="contenedor-ejemplos">
+                    <span class="detalle">(+) She watched a movie yesterday.</span>
+                    <span class="detalle">(-) She did not watch a movie yesterday.</span>
+                </div>
+
+                <div class="seccion-ejercicios">
+                    <div class="tema-nombre">Completa el espacio de abajo:</div>
+                    
+                    <div class="bloque-ejercicio">
+                        <span class="detalle">1. He </span>
+                        <span id="input-t1-q1" class="ej-input-reemplazo" contenteditable="true">___</span>
+                        <span class="detalle"> (buy) a new car last week.</span>
+                        <span id="fb-t1-q1" class="feedback"></span>
+                    </div>
+
+                    <div class="btn-accion" onclick="corregirEjercicio('input-t1-q1', 'fb-t1-q1', 'bought')">Corregir ejercicio</div>
+                    <div class="btn-accion" onclick="mostrarRespuesta('input-t1-q1', 'bought')">Mostrar respuesta</div>
+                </div>
+            </li>
+
+            <li id="tema-2" class="elemento-tema">
+                <span class="tema-nombre">past continuous</span>
+                <div class="detalle">Estructura: Sujeto + was o were + verbo con terminación ing</div>
+                
+                <div class="seccion-ejercicios">
+                    <div class="bloque-ejercicio">
+                        <span class="detalle">1. While I </span>
+                        <span id="input-t2-q1" class="ej-input-reemplazo" contenteditable="true">___</span>
+                        <span class="detalle"> (cook) dinner, the phone rang.</span>
+                        <span id="fb-t2-q1" class="feedback"></span>
+                    </div>
+
+                    <div class="btn-accion" onclick="corregirEjercicio('input-t2-q1', 'fb-t2-q1', 'was cooking')">Corregir ejercicio</div>
+                    <div class="btn-accion" onclick="mostrarRespuesta('input-t2-q1', 'was cooking')">Mostrar respuesta</div>
+                </div>
+            </li>
+
+        </ol>
+    </div>
+
+    <script>
+        function corregirEjercicio(inputId, feedbackId, respuestaCorrecta) {
+            var inputElemento = document.getElementById(inputId);
+            var feedbackElemento = document.getElementById(feedbackId);
+            var textoUsuario = inputElemento.innerText.trim();
+
+            if (textoUsuario.toLowerCase() === respuestaCorrecta.toLowerCase()) {
+                feedbackElemento.innerText = "¡Correcto!";
+            } else {
+                feedbackElemento.innerText = "Incorrecto. Intenta de nuevo.";
+            }
+        }
+
+        function mostrarRespuesta(inputId, respuestaCorrecta) {
+            var inputElemento = document.getElementById(inputId);
+            inputElemento.innerText = respuestaCorrecta;
+        }
+    </script>
+</body>
+</html>
